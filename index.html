@@ -1,13 +1,50 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
+    <title>Mi To-Do List</title>
   </head>
+
   <body>
-    <h1>Mi TODO list</h1>
+    <h1>Mi TO-DO list</h1>
+    <br>
+    <hr>
+
+    <section>
+    <button id="nueva-tarea">Nueva Tarea</button>
+    </section>
+
+    <br>
+
+    <h2>Mis Tareas</h2>
+
+    <br>
+
+    <article id="bloque-tarea">
+      <p>Nombre_Tarea</p>
+      <p>Fecha_Tarea</p>
+      <button id="tarea-completada">Completada</button>
+      <button id="tarea-eliminada">Eliminar</button>
+    </article>
+
+    <br>
+
+    <article id="bloque-crear-tarea">
+      <form id="form-tarea">
+        <h4>Nombre</h4>
+        <input type="text" id="input-nombre" placeholder="Nombre de la tarea" required/>
+        <h4>Fecha de entrega</h4>
+        <input type="date" id="input-fecha" required/>
+        <br>
+        <hr>
+        <button id="tarea-creada">Crear</button>
+        <button id="cancelar">Cancelar</button>
+      </form>
+    </article>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>
