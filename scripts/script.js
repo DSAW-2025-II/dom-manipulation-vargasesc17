@@ -10,7 +10,6 @@ const hwList = document.querySelector("#lista-tareas");
 const actualDate = new Date().toISOString().split('T')[0];
 document.querySelector("#input-fecha").setAttribute('min', actualDate);
 
-
 newHomeworkButton.addEventListener('click', showHomeworkCreatorBanner);
 createHWButton.addEventListener('click', createHomework);
 cancelHWButton.addEventListener('click', () => homeworkCreatorBanner.style.display = 'none')
