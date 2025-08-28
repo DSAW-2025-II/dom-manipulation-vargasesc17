@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#bloque-crear-tarea {
+    display: none;
+}
+
+.bloque-tarea {
+    display: none;
+}
