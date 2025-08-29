@@ -1,13 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
+    <title>Mi To-Do List</title>
   </head>
+
   <body>
-    <h1>Mi TODO list</h1>
+    <h1>Mi TO-DO list</h1>
+    <hr><br>
+
+    <section>
+    <button id="nueva-tarea">+ Nueva Tarea</button>
+    </section>
+
+    <h2>Mis Tareas</h2>
+
+    <br>
+
+    <section id="lista-tareas">
+      <article class="bloque-tarea">
+        <p class="nombre-tarea"></p>
+        <p class="fecha-tarea"><b>Para: </b> <span class="fecha"></span></p>
+        <section class="botones-mismo-bloque">
+          <button class="tarea-completada">Completa</button>
+          <button class="tarea-eliminada">Eliminar</button>
+        </section>
+        
+      </article>
+    </section>
+
+    <br>
+    
+    <div id="modal-overlay"></div>
+
+      <article id="bloque-crear-tarea">
+            <h4 label for="input-nombre">Nombre</h4>
+            <input 
+              type="text" 
+              id="input-nombre" 
+              placeholder="Nombre de la tarea" 
+            />
+
+            <h4 label for="input-fecha">Fecha de entrega</h4>
+            <input 
+              type="date"  
+              id="input-fecha" 
+              name="fecha" 
+            />
+
+            <section class="botones-mismo-bloque">
+              <button id="cancelar">Cancelar</button>
+              <button id="tarea-creada">Crear</button>
+            </section>
+        </article>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>

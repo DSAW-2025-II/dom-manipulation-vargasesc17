@@ -2,4 +2,228 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Roboto Slab", serif;
 }
+
+body {
+    background-color: rgb(151, 165, 201);
+}
+
+h1 {
+    padding: min(0.7em, 8%);
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(45, 45, 45);
+}
+
+h2 {
+    margin-top: 3%;
+    margin-left: 5%;
+    color: rgb(45, 45, 45);
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid rgb(79, 74, 128);
+}
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+#modal-overlay.active {
+    display: block;
+}
+
+#nueva-tarea {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 2% 5%;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgb(67, 60, 201);
+    color: white;
+}
+
+#nueva-tarea:hover {
+    background-color: rgb(53, 46, 128);
+}
+
+#bloque-crear-tarea {
+    display: none;
+    flex-direction: column;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+    height: 50vh;
+    max-height: 50vh;
+
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 4%;
+
+    background-color: rgb(92, 72, 133);
+    z-index: 1001; 
+}
+
+#bloque-crear-tarea h4 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(210, 197, 237);
+}
+
+#bloque-crear-tarea h4:nth-child(1) {
+    margin-top: 0rem;
+}
+
+#bloque-crear-tarea input {
+    width: 100%
+}
+
+#bloque-crear-tarea input#input-fecha {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.botones-mismo-bloque {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.botones-mismo-bloque button {
+    padding: 3% 3%;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid;
+}
+
+.botones-mismo-bloque #tarea-creada:hover {
+    background-color: rgb(210, 245, 164);    
+}
+
+.botones-mismo-bloque #cancelar:hover {
+    background-color: rgb(143, 143, 143);    
+}
+
+#lista-tareas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 min(5%, 8%);
+}
+
+#lista-tareas .bloque-tarea {
+    display: none;
+    flex-wrap: wrap;
+
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 2%;
+
+    flex: 1 1 calc(33.33% - 3%);
+    max-width: 150px;
+    min-width: 200px;
+    height: 140px;
+    overflow-y: auto;
+
+    background-color: rgb(127, 148, 199);
+}
+
+.bloque-tarea p {
+    color: rgb(55, 62, 82);
+}
+
+.bloque-tarea .nombre-tarea {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.bloque-tarea .fecha-tarea {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.botones-mismo-bloque .tarea-completada:hover {
+    background-color: rgb(210, 245, 164);    
+}
+
+.botones-mismo-bloque .tarea-eliminada:hover {
+    background-color: rgb(186, 132, 127);    
+}
+
+.botones-mismo-bloque button.disabled-btn,
+.botones-mismo-bloque button:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.botones-mismo-bloque button.disabled-btn:hover,
+.botones-mismo-bloque button:disabled:hover {
+    background-color: inherit;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    #lista-tareas .bloque-tarea {
+        padding: 4%;
+        height: 130px;
+    }
+}
+
+@media (min-width: 482px) and (max-width: 1024px) {
+    #nueva-tarea {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #lista-tareas .bloque-tarea {
+        min-width: 250px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 1025px) {
+    #nueva-tarea {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    #lista-tareas .bloque-tarea {
+        min-width: 250px;
+        height: 160px;
+    }
+}
+
+
+
+
+
