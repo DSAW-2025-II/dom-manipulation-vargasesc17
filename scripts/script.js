@@ -6,7 +6,7 @@ const hwSection = document.querySelector('.bloque-tarea');
 const createHWButton = document.querySelector('#tarea-creada');
 const cancelHWButton = document.querySelector('#cancelar');
 const hwList = document.querySelector("#lista-tareas");
-//const overlay = document.querySelector('#modal-overlay');
+const overlay = document.querySelector('#modal-overlay');
 
 // Sólo permite ingresar fechas en el futuro
 const actualDate = new Date().toISOString().split('T')[0];
@@ -17,7 +17,7 @@ newHomeworkButton.addEventListener('click', showHomeworkCreatorBanner);
 createHWButton.addEventListener('click', createHomework);
 cancelHWButton.addEventListener('click', () => {
     homeworkCreatorBanner.style.display = 'none';
-    //overlay.classList.remove("active");
+    overlay.classList.remove("active");
 });
 
 // Función para crear una tarea
@@ -54,17 +54,15 @@ function createHomework() {
 
     // Se esconde el banner para poner la información de las tareas
     homeworkCreatorBanner.style.display = 'none';
-    //overlay.classList.remove("active");
+    overlay.classList.remove("active");
 }
 
 // Muestra el banner para poner la información de las tareas
 function showHomeworkCreatorBanner() {
-    //overlay.classList.add("active");
+    overlay.classList.add("active");
     homeworkCreatorBanner.style.display = 'block';
     document.querySelector('#input-nombre').value = "";
     document.querySelector('#input-fecha').value = "";
-    console.log("j");
-
 }
 
 
