@@ -182,5 +182,33 @@ hr {
     background-color: inherit;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    #lista-tareas .bloque-tarea {
+        padding: 4%;
+        height: 130px;
+    }
+}
+
+@media (min-width: 482px) and (max-width: 1024px) {
+    #nueva-tarea {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #lista-tareas .bloque-tarea {
+        min-width: 250px;
+        height: 150px;
+    }
+}
+
+
+
 
 
