@@ -208,6 +208,21 @@ hr {
     }
 }
 
+@media (min-width: 1025px) {
+    #nueva-tarea {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    #lista-tareas .bloque-tarea {
+        min-width: 250px;
+        height: 160px;
+    }
+}
+
 
 
 
