@@ -109,7 +109,7 @@ hr {
 }
 
 .botones-mismo-bloque button {
-    padding: 2% 2%;
+    padding: 3% 3%;
     cursor: pointer;
     border-radius: 30px;
     border: 1px solid;
@@ -123,8 +123,64 @@ hr {
     background-color: rgb(143, 143, 143);    
 }
 
-.bloque-tarea {
+#lista-tareas {
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 min(5%, 8%);
 }
+
+#lista-tareas .bloque-tarea {
+    display: none;
+    flex-wrap: wrap;
+
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 2%;
+
+    flex: 1 1 calc(33.33% - 3%);
+    max-width: 150px;
+    min-width: 200px;
+    height: 140px;
+    overflow-y: auto;
+
+    background-color: rgb(127, 148, 199);
+}
+
+.bloque-tarea p {
+    color: rgb(55, 62, 82);
+}
+
+.bloque-tarea .nombre-tarea {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.bloque-tarea .fecha-tarea {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.botones-mismo-bloque .tarea-completada:hover {
+    background-color: rgb(210, 245, 164);    
+}
+
+.botones-mismo-bloque .tarea-eliminada:hover {
+    background-color: rgb(186, 132, 127);    
+}
+
+.botones-mismo-bloque button.disabled-btn,
+.botones-mismo-bloque button:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.botones-mismo-bloque button.disabled-btn:hover,
+.botones-mismo-bloque button:disabled:hover {
+    background-color: inherit;
+}
+
+
 

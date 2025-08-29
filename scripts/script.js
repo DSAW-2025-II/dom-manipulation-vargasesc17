@@ -1,7 +1,6 @@
 const newHomeworkButton = document.querySelector('#nueva-tarea');
 const homeworkCreatorBanner = document.querySelector('#bloque-crear-tarea');
-const markCompletedHWButton = document.querySelector('#tarea-completada');
-const eliminateHWButton = document.querySelector('#tarea-eliminada');
+
 const hwSection = document.querySelector('.bloque-tarea');
 const createHWButton = document.querySelector('#tarea-creada');
 const cancelHWButton = document.querySelector('#cancelar');
@@ -42,9 +41,24 @@ function createHomework() {
     newHW.querySelector(".nombre-tarea").textContent = hwName;
     newHW.querySelector(".fecha").textContent += hwDate;
 
+    // Se crean los dos botones de completar y eliminar la tarea
+    const markCompletedHWButton = newHW.querySelector('.tarea-completada');
+    const eliminateHWButton = newHW.querySelector('.tarea-eliminada');
+
     // Funcionalidad de los botones de completar o eliminar la tarea
-    newHW.querySelector(".tarea-completada").addEventListener("click", 
-        () => newHW.remove());
+    markCompletedHWButton.addEventListener("click", 
+        () => {
+            markCompletedHWButton.disabled = true;
+            eliminateHWButton.disabled = true;
+            markCompletedHWButton.classList.add('disabled-btn');
+            eliminateHWButton.classList.add('disabled-btn');
+
+            newHW.style.backgroundColor = "#5c707d";
+
+            setTimeout(() => {
+                newHW.remove();
+            }, 3000);
+        });
     
     newHW.querySelector(".tarea-eliminada").addEventListener("click", 
         () => newHW.remove());
